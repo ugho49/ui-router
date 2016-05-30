@@ -1,25 +1,30 @@
-<html>
-<body ng-app="myApp">
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
 
-    <div ui-view>
-        NOTHING
+    <div class="container">
+        <!-- We'll also add some navigation: -->
+        <button class="btn btn-primary" ui-sref="home">Home</button>
+        <button class="btn btn-primary" ui-sref="operations">Operations</button>
+
+        <div ui-view></div>
     </div>
 
-    <!-- We'll also add some navigation: -->
-    <button ui-sref="birth">birth</button>
-    <button ui-sref="birth.childhood">childhood</button>
-    <button ui-sref="birth.childhood.study">study</button>
-    <button ui-sref="birth.childhood.carreer">carreer</button>
-    <button ui-sref="birth.childhood.study.PhD">PhD</button>
-    <button ui-sref="birth.childhood.carreer.workingLife">workingLife</button>
-    <button ui-sref="birth.childhood.carreer.workingLife.pension">pension</button>
-    <button ui-sref="birth.childhood.carreer.workingLife.pension.death">death</button>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js" charset="utf-8"></script>
     <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="node_modules/restangular/dist/restangular.min.js" charset="utf-8"></script>
-    <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js" charset="utf-8"></script>
-    <script src="scripts/app.js" charset="utf-8"></script>
-</body>
 
+    <!-- My Scripts -->
+    <script src="scripts/app.js" charset="utf-8"></script>
+    <script src="scripts/router.js" charset="utf-8"></script>
+    <script src="scripts/controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="scripts/controllers/operationsCtrl.js" charset="utf-8"></script>
+
+</body>
 </html>
