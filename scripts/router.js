@@ -39,4 +39,10 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, Rest
         },
         controller: 'BirthdayCtrl'
     })
+
+    $stateProvider.state('birthday.age', {
+        url: '/age',
+        templateUrl: 'views/age.html',
+        controller: 'AgeCtrl'
+    })
 });
