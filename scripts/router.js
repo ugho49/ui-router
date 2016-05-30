@@ -4,9 +4,9 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, Rest
 
     RestangularProvider.setBaseUrl("http://foaas.com/");
 
-    RestangularProvider.setDefaultHeaders({
-        'Content-Type' : 'application/json'
-    });
+    RestangularProvider.setDefaultHeaders({'Content-Type' : 'application/json'});
+
+    _.contains = _.includes;
 
     $stateProvider.state('home', {
         url: '/',
