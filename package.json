@@ -2,7 +2,6 @@
   "name": "ui-router",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +9,11 @@
     "type": "git",
     "url": "git+https://github.com/ugho49/ui-router.git"
   },
-  "author": "",
+  "author": "Ugho STEPHAN",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ugho49/ui-router/issues"
-  },
-  "homepage": "https://github.com/ugho49/ui-router#readme"
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.0",
+    "restangular": "^1.5.2"
+  }
 }
