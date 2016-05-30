@@ -4,6 +4,10 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, Rest
 
     RestangularProvider.setBaseUrl("http://foaas.com/");
 
+    RestangularProvider.setDefaultHeaders({
+        'Content-Type' : 'application/json'
+    });
+
     $stateProvider.state('home', {
         url: '/',
         controller: 'MainCtrl',
@@ -21,5 +25,18 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, Rest
             }
         },
         controller: 'OperationsCtrl'
+    })
+
+    $stateProvider.state('birthday', {
+        url: '/birthday',
+        templateUrl: 'views/birthday.html',
+        resolve:{
+            birthday: function(Restangular){
+                return Restangular.one('bday/baby/Ugho').get().then(function(response){
+                    return response;
+                });
+            }
+        },
+        controller: 'BirthdayCtrl'
     })
 });
