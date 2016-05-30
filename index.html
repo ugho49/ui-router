@@ -1,0 +1,24 @@
+<html>
+<body ng-app="myApp">
+
+    <div ui-view>
+        NOTHING
+    </div>
+
+    <!-- We'll also add some navigation: -->
+    <a ui-sref="birth">birth</a>
+    <a ui-sref="birth.childhood">childhood</a>
+    <a ui-sref="birth.childhood.study">study</a>
+    <a ui-sref="birth.childhood.carreer">carreer</a>
+    <a ui-sref="birth.childhood.study.PhD">PhD</a>
+    <a ui-sref="birth.childhood.carreer.workingLife">workingLife</a>
+    <a ui-sref="birth.childhood.carreer.workingLife.pension">pension</a>
+    <a ui-sref="birth.childhood.carreer.workingLife.pension.death">death</a>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+
+    <script src="scripts/app.js" charset="utf-8"></script>
+</body>
+
+</html>
